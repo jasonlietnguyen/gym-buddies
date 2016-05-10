@@ -1,0 +1,45 @@
+<!--<form ng-submit="$ctrl.addChat($ctrl.newChat)">
+    <label for="author">Author:</label><br>
+    <input type="text" ng-model="$ctrl.newChat.author"><br>
+    <label for="message">Message:</label><br>
+    <input type="text" ng-model="$ctrl.newChat.message"><br>
+    <label for="time">Time Stamp:</label><br>
+    <input type="text" ng-model="$ctrl.newChat.time"><br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>-->
+
+   <div class="container">
+        <div class="main-container center-block">
+            <div class="panel-heading title">Let's Chat</div>
+            <div class="panel-body">
+                <form type="form form-inline" ng-submit="$ctrl.addChat($ctrl.newChat)">
+                    <input placeholder="Author" type="text" class="form-control" ng-model="$ctrl.newChat.author"><br>
+                    <input placeholder="Message" type="text" class="form-control" ng-model="$ctrl.newChat.message"><br>
+                    <input placeholder="Time" type="text" class="form-control" ng-model="$ctrl.newChat.time"><br>
+                    <div class="center-block text-center">
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
+                    <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear</button>
+                    </div>
+                </form>   
+            </div>
+        </div>
+        
+        <div class="panel-body">
+                <div class="list" ng-repeat="chat in $ctrl.list" style="margin-bottom: 20px; padding:20px 0">
+                    <div class="row">
+                        <div class="col-xs-2">
+                    <h4>{{chat.author}}</h4>
+                    </div>
+                        <div class="col-xs-4">
+                    <h4>{{chat.message}}</h4>
+                    </div>
+                        <div class="col-xs-4">
+                    <h4>{{chat.time}}</h4>
+                    </div>
+                        <div class="col-xs-2">
+                    <button class="btn btn-danger" ng-click="$ctrl.removeChat(chat)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</button>
+                        </div>
+                     </div>
+                </div>
+            </div>

@@ -1,0 +1,56 @@
+<!--<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 main-container">
+            <div class="panel-body">
+                <form type="form form-inline" ng-submit="$ctrl.addShare($ctrl.newShare)">
+                    <input placeholder="Title" type="text" class="form-control" ng-model="$ctrl.newShare.title">
+                    <input placeholder="Body" type="text" class="form-control" ng-model="$ctrl.newShare.body">
+                    <input placeholder="Image Url" type="text" class="form-control" ng-model="$ctrl.newShare.image">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-danger" type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+   </div>-->
+   
+   <div class="container">
+        <div class="main-container center-block">
+            <div class="panel-heading title">Please Share</div>
+            
+            <li ng-if="$ctrl.member.email">
+				<h1 style="color: #fff;" class="">Hi, {{$ctrl.member.username.split(' ')[0]}}</h1>
+			</li>
+            
+            <div class="panel-body">
+                <form type="form form-inline" ng-submit="$ctrl.addShare($ctrl.newShare)">
+                    <input placeholder="Title" type="text" class="form-control" ng-model="$ctrl.newShare.title"><br>
+                    <input placeholder="Body" type="text" class="form-control" ng-model="$ctrl.newShare.body"><br>
+                    <input placeholder="Image Url" type="text" class="form-control" ng-model="$ctrl.newShare.image"><br>
+                    <div class="center-block text-center">
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add</button>
+                    <button class="btn btn-danger" type="reset"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Clear</button>
+                    </div>
+                </form>   
+            </div>
+        </div>
+        
+         <div class="panel-body">
+                <div class="list" ng-repeat="share in $ctrl.list" style="margin-bottom: 20px; padding:20px 0">
+                    <div class="row">
+                        <div class="col-xs-2">
+                    <h4>{{share.title}}</h4>
+                    </div>
+                        <div class="col-xs-4">
+                    <h4>{{share.body}}</h4>
+                    <h1></h1>
+                    </div>
+                        <div class="col-xs-4">
+                    <img src="{{share.image}}" alt="">
+                    </div>
+                        <div class="col-xs-2">
+                    <button class="btn btn-danger" ng-click="$ctrl.removeShare(share)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remove</button>
+                        </div>
+                     </div>
+                </div>
+            </div>

@@ -1,0 +1,31 @@
+.main-container {
+    padding: 10px 20px 0 20px;
+    background-color: #555;
+    border-radius: 10px;
+    margin: 30px 200px;
+    opacity: .85;
+    -webkit-filter: drop-shadow(8px 8px 10px #222); 
+    filter: drop-shadow(8px 8px 10px #222);
+}
+.main-container:hover{
+    background-color: #333;
+}
+.title {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 6em;
+}
+.list {
+    text-align: center;
+    background-color: #555;
+    border-radius: 10px;
+    opacity: .8;
+    padding: 10px;
+    color: white;
+    -webkit-filter: drop-shadow(8px 8px 10px #222); 
+    filter: drop-shadow(8px 8px 10px #222);
+}
+.list:hover {
+    background-color: #333;
+}
